@@ -21,6 +21,10 @@ sudo usermod -aG docker $USER
 newgrp docker
 docker run hello-world
 
+# Enable Docker to start on boot
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+
 echo "Log out and in again to make sure Docker permissions go through."
 
 # Download docker-compose binary
